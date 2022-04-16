@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class IguanaBullet : MonoBehaviour
 {
-    GameObject player;
     Vector3 playerPosition;
     private float speed = 20;
     private Vector3 normalizeDirection;
     void Start()
     {
-        player = GameObject.Find("Player");
-
-        var playerPosition = player.transform.position;
-        normalizeDirection = (player.transform.position - transform.position).normalized;
-
+        playerPosition = FindObjectOfType<Player>().transform.position;
+        normalizeDirection = (playerPosition - transform.position).normalized;
     }
 
     // Update is called once per frame
