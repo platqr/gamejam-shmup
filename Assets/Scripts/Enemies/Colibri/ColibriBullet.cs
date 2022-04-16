@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ColibriBullet : MonoBehaviour
 {
-    private float _speed = -20;
+    private float speed = -20;
 
     void Start()
     {
@@ -17,7 +17,10 @@ public class ColibriBullet : MonoBehaviour
     }
     
     private void Move(){
-        transform.Translate(new Vector3(_speed * Time.deltaTime, 0, 0), Space.World);
+        transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0), Space.World);
     }
 
+    private void OnBecameInvisible() {
+        Destroy(gameObject);
+    }
 }

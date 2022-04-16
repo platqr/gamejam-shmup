@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class IguanaBullet : MonoBehaviour
 {
-    GameObject _player;
-    Vector3 _playerPosition;
-    private float _speed = 20;
+    GameObject player;
+    Vector3 playerPosition;
+    private float speed = 20;
     private Vector3 normalizeDirection;
     void Start()
     {
-        _player = GameObject.Find("Player");
+        player = GameObject.Find("Player");
 
-        var _playerPosition = _player.transform.position;
-        normalizeDirection = (_player.transform.position - transform.position).normalized;
+        var playerPosition = player.transform.position;
+        normalizeDirection = (player.transform.position - transform.position).normalized;
 
     }
 
@@ -24,7 +24,10 @@ public class IguanaBullet : MonoBehaviour
     }
     
     private void Move(){
-         transform.position += normalizeDirection * _speed * Time.deltaTime;
+         transform.position += normalizeDirection * speed * Time.deltaTime;
     }
 
+    private void OnBecameInvisible() {
+        Destroy(gameObject);
+    }
 }

@@ -5,9 +5,9 @@ using UnityEngine;
 public class ShootClass : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private GameObject _bullet;
+    [SerializeField] private GameObject bullet;
     public float timeRemaining = 1;
-    public float _hp;
+    public float hp;
 
     void Start()
     {
@@ -28,11 +28,11 @@ public class ShootClass : MonoBehaviour
     
     void Shoot()
     {
-        Instantiate(_bullet, gameObject.transform.position, Quaternion.identity);
+        Instantiate(bullet, gameObject.transform.position, Quaternion.identity);
     }
 
     private void GetDamage(){
-        if (--_hp <= 0)
+        if (--hp <= 0)
         {
             Destroy(gameObject);
         }
@@ -41,5 +41,9 @@ public class ShootClass : MonoBehaviour
         if(other.tag == "PlayerBullet"){
             GetDamage();
         }
+    }
+
+    private void OnBecameInvisible() {
+        Destroy(gameObject);
     }
 }
