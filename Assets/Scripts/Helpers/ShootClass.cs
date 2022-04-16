@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Colibri : MonoBehaviour
+public class ShootClass : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private GameObject _bullet;
     public float timeRemaining = 1;
-    private float _hp = 1;
+    public float _hp;
 
     void Start()
     {

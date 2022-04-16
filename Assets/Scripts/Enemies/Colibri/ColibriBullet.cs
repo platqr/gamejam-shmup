@@ -17,7 +17,7 @@ public class ColibriBullet : MonoBehaviour
     }
     
     private void Move(){
-        transform.Translate(new Vector3(_speed * Time.deltaTime, 0, 0), Space.Self);
+        transform.Translate(new Vector3(_speed * Time.deltaTime, 0, 0), Space.World);
     }
 
 }
