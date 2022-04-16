@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8556733666609134872}
   - component: {fileID: 8556733666609134873}
   - component: {fileID: 6257075515876676456}
+  - component: {fileID: 1149650587688174388}
   m_Layer: 0
   m_Name: Iguana
   m_TagString: Untagged
@@ -113,3 +114,17 @@ MonoBehaviour:
   bullet: {fileID: 849241273215992494, guid: 9a0088831cb0feb4f9b9d2efb7884ab8, type: 3}
   timeRemaining: 1
   hp: 5
+--- !u!114 &1149650587688174388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8556733666609134874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8e6c75b4c988a4f9742afc82f3bcbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  target: {fileID: 0}
