@@ -111,9 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: febed646bcc54a44b90f8655d691eca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bullet: {fileID: 301134528231002263, guid: f30a2f652da0fab4eb9a983943c94fe7, type: 3}
+  bullet: {fileID: 301134528231002263, guid: f30a2f652da0fab4eb9a983943c94fe7, type: 3}
   timeRemaining: 1
-  _hp: 1
+  hp: 1
 --- !u!114 &2192253149660411826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,3 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d8e6c75b4c988a4f9742afc82f3bcbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  target: {fileID: 0}
+  minimunDistance: 5
