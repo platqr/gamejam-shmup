@@ -7,7 +7,6 @@ public class ShootClass : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private GameObject bullet;
     public float bulletFrequency;
-    public float hp;
 
     private float timeRemaining;
 
@@ -33,15 +32,4 @@ public class ShootClass : MonoBehaviour
         Instantiate(bullet, gameObject.transform.position, Quaternion.identity);
     }
 
-    private void GetDamage(){
-        if (--hp <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D other) {
-        if(other.tag == "PlayerBullet"){
-            GetDamage();
-        }
-    }
 }

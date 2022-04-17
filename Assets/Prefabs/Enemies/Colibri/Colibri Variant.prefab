@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Colibri Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 84831e1f814fb59489832e7bcbab320a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84831e1f814fb59489832e7bcbab320a, type: 3}
 --- !u!1 &4448113684363596299 stripped
@@ -62,46 +66,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 84831e1f814fb59489832e7bcbab320a, type: 3}
   m_PrefabInstance: {fileID: 3565643665957646170}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &311801735314971255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4448113684363596299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5b35bcd2358b674787d2a09c0f9af92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2559421602413801213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4448113684363596299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: febed646bcc54a44b90f8655d691eca1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 7391207891226866000, guid: 56c8429a227d1014d91eb68439a5fd93, type: 3}
-  bulletFrequency: 1
-  hp: 5
---- !u!114 &9147577393927484823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4448113684363596299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d8e6c75b4c988a4f9742afc82f3bcbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
 --- !u!23 &-4630649386769295787
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -144,3 +108,57 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &311801735314971255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4448113684363596299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b35bcd2358b674787d2a09c0f9af92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2559421602413801213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4448113684363596299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: febed646bcc54a44b90f8655d691eca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 7391207891226866000, guid: 56c8429a227d1014d91eb68439a5fd93, type: 3}
+  bulletFrequency: 1
+--- !u!114 &7283402839011569064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4448113684363596299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f531b2c8af31bc45a9f58c5e18cd5af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionEffect: {fileID: 7438732860013103435, guid: d8b93fe9f8ba62745864a5c01dd04550, type: 3}
+  takeDamage: {fileID: 6103925763245032333, guid: c84fab580740bcc44807d168bb08f385, type: 3}
+  hp: 5
+--- !u!114 &9147577393927484823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4448113684363596299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8e6c75b4c988a4f9742afc82f3bcbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10

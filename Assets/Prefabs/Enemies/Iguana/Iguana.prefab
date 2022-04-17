@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -6529242597363467970}
   m_Layer: 0
   m_Name: Iguana
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,7 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 849241273215992494, guid: 9a0088831cb0feb4f9b9d2efb7884ab8, type: 3}
   bulletFrequency: 0.5
-  hp: 5
 --- !u!114 &1149650587688174388
 MonoBehaviour:
   m_ObjectHideFlags: 0
