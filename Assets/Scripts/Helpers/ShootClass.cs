@@ -44,8 +44,4 @@ public class ShootClass : MonoBehaviour
             GetDamage();
         }
     }
-
-    private void OnBecameInvisible() {
-        Destroy(gameObject);
-    }
 }
