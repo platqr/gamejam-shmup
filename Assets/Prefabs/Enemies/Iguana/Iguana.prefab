@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 849241273215992494, guid: 9a0088831cb0feb4f9b9d2efb7884ab8, type: 3}
-  timeRemaining: 1
+  bulletFrequency: 0.5
   hp: 5
 --- !u!114 &1149650587688174388
 MonoBehaviour:
@@ -126,5 +126,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d8e6c75b4c988a4f9742afc82f3bcbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  target: {fileID: 0}
+  speed: 10

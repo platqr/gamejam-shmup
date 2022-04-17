@@ -6,12 +6,14 @@ public class ShootClass : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private GameObject bullet;
-    public float timeRemaining = 1;
+    public float bulletFrequency;
     public float hp;
+
+    private float timeRemaining;
 
     void Start()
     {
-        
+        timeRemaining = bulletFrequency;
     }
 
     // Update is called once per frame
@@ -21,7 +23,7 @@ public class ShootClass : MonoBehaviour
         {
             timeRemaining -= Time.deltaTime;
         } else {
-            timeRemaining = 1;
+            timeRemaining = bulletFrequency;
             Shoot();
         }
     }

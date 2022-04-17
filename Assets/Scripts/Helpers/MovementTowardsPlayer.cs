@@ -6,12 +6,12 @@ public class MovementTowardsPlayer : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
-    public Transform target;
+    private Transform target;
     private float timeRemaining = 3;
 
     void Start()
     {
-       
+       target = FindObjectOfType<Player>().transform;
     }
 
     // Update is called once per frame

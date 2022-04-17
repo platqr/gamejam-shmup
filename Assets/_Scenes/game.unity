@@ -130,17 +130,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 338600008}
     m_Modifications:
+    - target: {fileID: 1535860214, guid: 3b6656bd6cf9aa7459d49212cfaba76e, type: 3}
+      propertyPath: bulletFrequency
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 423401666199995689, guid: 3b6656bd6cf9aa7459d49212cfaba76e, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 423401666199995689, guid: 3b6656bd6cf9aa7459d49212cfaba76e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.386
+      value: 25.01
       objectReference: {fileID: 0}
     - target: {fileID: 423401666199995689, guid: 3b6656bd6cf9aa7459d49212cfaba76e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.231
+      value: 5.61
       objectReference: {fileID: 0}
     - target: {fileID: 423401666199995689, guid: 3b6656bd6cf9aa7459d49212cfaba76e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -178,6 +182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Colibri
       objectReference: {fileID: 0}
+    - target: {fileID: 2192253149660411826, guid: 3b6656bd6cf9aa7459d49212cfaba76e, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 709821855}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b6656bd6cf9aa7459d49212cfaba76e, type: 3}
 --- !u!1 &331204462
@@ -611,6 +619,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!4 &709821855 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 127336ae42a600648a2c67cbf7355ca0, type: 3}
+  m_PrefabInstance: {fileID: 709821849}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1184832662
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,31 +721,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184832662}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1535860208 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 423401666199995693, guid: 3b6656bd6cf9aa7459d49212cfaba76e, type: 3}
-  m_PrefabInstance: {fileID: 211670101}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1535860209 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423401666199995689, guid: 3b6656bd6cf9aa7459d49212cfaba76e, type: 3}
   m_PrefabInstance: {fileID: 211670101}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1535860214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535860208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: febed646bcc54a44b90f8655d691eca1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bullet: {fileID: 301134528231002263, guid: f30a2f652da0fab4eb9a983943c94fe7, type: 3}
-  timeRemaining: 1
-  _hp: 1
 --- !u!1001 &8556733666054944619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -740,6 +733,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 338600008}
     m_Modifications:
+    - target: {fileID: 1149650587688174388, guid: 383dec79c9013fc4ea421aaae92954c8, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149650587688174388, guid: 383dec79c9013fc4ea421aaae92954c8, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 709821855}
+    - target: {fileID: 6257075515876676456, guid: 383dec79c9013fc4ea421aaae92954c8, type: 3}
+      propertyPath: bulletFrequency
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8556733666609134874, guid: 383dec79c9013fc4ea421aaae92954c8, type: 3}
       propertyPath: m_Name
       value: Iguana
@@ -750,11 +755,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8556733666609134878, guid: 383dec79c9013fc4ea421aaae92954c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.49
+      value: 26.19
       objectReference: {fileID: 0}
     - target: {fileID: 8556733666609134878, guid: 383dec79c9013fc4ea421aaae92954c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.48
+      value: -6.61
       objectReference: {fileID: 0}
     - target: {fileID: 8556733666609134878, guid: 383dec79c9013fc4ea421aaae92954c8, type: 3}
       propertyPath: m_LocalPosition.z

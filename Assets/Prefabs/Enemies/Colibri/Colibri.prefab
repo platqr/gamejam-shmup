@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 301134528231002263, guid: f30a2f652da0fab4eb9a983943c94fe7, type: 3}
-  timeRemaining: 1
+  bulletFrequency: 0.5
   hp: 1
 --- !u!114 &2192253149660411826
 MonoBehaviour:
@@ -127,4 +127,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  target: {fileID: 0}
