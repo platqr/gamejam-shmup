@@ -19,7 +19,7 @@ public class ShootClass : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timeRemaining > 0)
+        if (timeRemaining > 0 || transform.position.x < -10)
         {
             timeRemaining -= Time.deltaTime;
         } else {
