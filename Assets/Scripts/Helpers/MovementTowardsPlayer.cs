@@ -22,8 +22,9 @@ public class MovementTowardsPlayer : MonoBehaviour
 
     private void Move()
     {
-       if(timeRemaining > 0 && target.position.x < transform.position.x) {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        Vector3 playerRelativeToEnemie = transform.InverseTransformPoint(target.position);
+        if(timeRemaining > 0 && target.position.x < transform.position.x && playerRelativeToEnemie.y != 0) {
+            transform.Translate(new Vector3(-speed * Time.deltaTime, ((playerRelativeToEnemie.y / System.Math.Abs(playerRelativeToEnemie.y) * speed) * Time.deltaTime) / 2, 0), Space.World);
             timeRemaining -= Time.deltaTime;
         } else {
             transform.Translate(new Vector3(-speed * Time.deltaTime, 0, 0), Space.World);
