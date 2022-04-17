@@ -22,8 +22,4 @@ public class IguanaBullet : MonoBehaviour
     private void Move(){
          transform.position += normalizeDirection * speed * Time.deltaTime;
     }
-
-    private void OnBecameInvisible() {
-        Destroy(gameObject);
-    }
 }

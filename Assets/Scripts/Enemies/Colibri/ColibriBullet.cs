@@ -19,8 +19,4 @@ public class ColibriBullet : MonoBehaviour
     private void Move(){
         transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0), Space.World);
     }
-
-    private void OnBecameInvisible() {
-        Destroy(gameObject);
-    }
 }
