@@ -14,8 +14,5 @@ public class BulletPlayer : MonoBehaviour
     void Update()
     {
         transform.Translate(new Vector3(_speed * Time.deltaTime, 0, 0), Space.World);
-        if(transform.position.x >= 35){
-            Destroy(gameObject);
-        }
     }
 }

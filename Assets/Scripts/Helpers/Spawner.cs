@@ -25,11 +25,16 @@ public class Spawner : MonoBehaviour
             currentTimeToSpawn -= Time.deltaTime;
         } else {
             SpawnObject();
-            currentTimeToSpawn = timeToSpawn;
+            currentTimeToSpawn = Random.Range(1,5);
+            // currentTimeToSpawn = timeToSpawn;
         }
     }
     void SpawnObject() {
         int index = Random.Range(0, objectsToSpawn.Count);
-        Instantiate(objectsToSpawn[index], transform.position + new Vector3(0, Random.Range(-10, 10), 0), Quaternion.identity);
+        int range = Random.Range(-10, 10);
+
+        for(int i = 0; i < Random.Range(1, 1); i++) {
+            Instantiate(objectsToSpawn[index], transform.position + new Vector3(0, range + (i * 2), 0), Quaternion.identity);
+        }
     }
 }

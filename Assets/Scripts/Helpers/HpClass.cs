@@ -18,20 +18,21 @@ public class HpClass : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
     
     private void GetDamage(){
-        takeDamage.Play(0);
+        takeDamage.Play();
         if (--hp <= 0)
         {
-            explosionEffect.Play(0);
-            Destroy(gameObject);
+            explosionEffect.Play();
+            // Destroy(gameObject);
         }
     }
     private void OnTriggerEnter2D(Collider2D other) {
+        Debug.Log(other);
         if(other.tag == "PlayerBullet"){
             GetDamage();
+            // Destroy(other.gameObject);
         }
     }
 }

@@ -309,6 +309,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 127336ae42a600648a2c67cbf7355ca0, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127336ae42a600648a2c67cbf7355ca0, type: 3}
 --- !u!1 &709821850 stripped
@@ -328,7 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320e50254d763344993a51fc2c19d969, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 100
+  _playerBullet: {fileID: 3180023591799775763, guid: fd7ddb9b2c7f686ec9b09c37a52bf049, type: 3}
 --- !u!50 &709821852
 Rigidbody2D:
   serializedVersion: 4
