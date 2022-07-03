@@ -12,19 +12,14 @@ public class Player : MonoBehaviour
     private float bulletTimer = 0f;
     [SerializeField] private float fireRate = .03f;
 
-    void Start()
-    {
-        Debug.Log("game start");
-    }
-
     void Update()
     {
-        Move();
-        Shoot();
+        Movement();
+        Shooting();
         time += Time.deltaTime;
     }
 
-    private void Move(){
+    private void Movement(){
         xInput = Input.GetAxisRaw("Horizontal");
         yInput = Input.GetAxisRaw("Vertical");
         transform.Translate(new Vector3(speed * xInput * Time.deltaTime, speed * yInput * Time.deltaTime, 0), Space.World);
@@ -34,9 +29,10 @@ public class Player : MonoBehaviour
         else{
             speed = 20;
         }
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -19.5f, 19.5f), Mathf.Clamp(transform.position.y, -11, 11), transform.position.z);
     }
 
-    private void Shoot(){
+    private void Shooting(){
         if (Input.GetKey(KeyCode.K) && (time - bulletTimer) >= fireRate){
             Instantiate(playerBullet, gameObject.transform.position, Quaternion.identity);
             bulletTimer = time;
@@ -45,7 +41,7 @@ public class Player : MonoBehaviour
     }
 
     private void PlayerDeath(){
-        Debug.Log("I died");
+        Debug.Log("you died");
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
