@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject playerBullet;
     private float time = 0f;
     private float bulletTimer = 0f;
-    [SerializeField] private float fireRate = .03f;
+    private float fireRate = .03f;
 
     void Update()
     {
