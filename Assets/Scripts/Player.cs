@@ -4,50 +4,53 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private float _speed;
-    private float _xInput;
-    private float _yInput;
-    [SerializeField] private GameObject _playerBullet;
-    private float _time;
-    private float _bulletTimer;
+    private float speed;
+    private float xInput;
+    private float yInput;
+    [SerializeField] private GameObject playerBullet;
+    private float time = 0f;
+    private float bulletTimer = 0f;
+    [SerializeField] private float fireRate = .03f;
 
     void Start()
     {
-
+        Debug.Log("game start");
     }
 
     void Update()
     {
         Move();
         Shoot();
+        time += Time.deltaTime;
     }
 
     private void Move(){
-        _xInput = Input.GetAxisRaw("Horizontal");
-        _yInput = Input.GetAxisRaw("Vertical");
-        transform.Translate(new Vector3(_speed * _xInput * Time.deltaTime, _speed * _yInput * Time.deltaTime, 0), Space.World);
+        xInput = Input.GetAxisRaw("Horizontal");
+        yInput = Input.GetAxisRaw("Vertical");
+        transform.Translate(new Vector3(speed * xInput * Time.deltaTime, speed * yInput * Time.deltaTime, 0), Space.World);
         if (Input.GetKey(KeyCode.J)){
-            _speed = 10;
+            speed = 10;
         }
         else{
-            _speed = 20;
+            speed = 20;
         }
     }
 
     private void Shoot(){
-        _time += Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.K)){
-            Instantiate(_playerBullet, gameObject.transform.position, Quaternion.identity);
-            //_bulletTimer = _time;
+        if (Input.GetKey(KeyCode.K) && (time - bulletTimer) >= fireRate){
+            Instantiate(playerBullet, gameObject.transform.position, Quaternion.identity);
+            bulletTimer = time;
+            Debug.Log("shoot at " + time);
         }
-        /*if (_time - _bulletTimer >= .5){
-            Instantiate(_playerBullet, gameObject.transform.position, Quaternion.identity);
-        }*/
+    }
+
+    private void PlayerDeath(){
+        Debug.Log("I died");
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Enemy" || other.tag == "EnemyBullet"){
-            //morir
+            PlayerDeath();
         }
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletPlayer : MonoBehaviour
 {
-    private float _speed = 50;//120;
+    private float _speed = 180;
     
     void Start()
     {
