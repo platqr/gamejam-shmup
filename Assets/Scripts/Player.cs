@@ -24,10 +24,10 @@ public class Player : MonoBehaviour
         yInput = Input.GetAxisRaw("Vertical");
         transform.Translate(new Vector3(speed * xInput * Time.deltaTime, speed * yInput * Time.deltaTime, 0), Space.World);
         if (Input.GetKey(KeyCode.J)){
-            speed = 10;
+            speed = 12.5f;
         }
         else{
-            speed = 20;
+            speed = 25;
         }
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -19.5f, 19.5f), Mathf.Clamp(transform.position.y, -11, 11), transform.position.z);
     }
